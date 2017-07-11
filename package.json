@@ -2,6 +2,9 @@
   "name": "hatespotting",
   "version": "1.0.0",
   "description": "hatespotting app",
+  "engines": {
+    "node": "6.11.1"
+  },
   "main": "index.js",
   "scripts": {
     "test": "test",
