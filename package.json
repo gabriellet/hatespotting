@@ -7,8 +7,11 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "test",
     "start": "node index.js"
+  },
+  "dependencies": {
+    "ejs": "2.5.6",
+    "express": "4.15.2"
   },
   "repository": {
     "type": "git",
@@ -22,6 +25,6 @@
   "homepage": "https://github.com/gabriellet/hatespotting#readme",
   "devDependencies": {
     "ejs": "^2.5.6",
-    "express": "^4.15.3",
+    "express": "^4.15.3"
   }
 }
