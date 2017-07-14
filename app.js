@@ -10,7 +10,7 @@ app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/templates');
 app.set('view engine', 'ejs');
 
-routes.get('/', function(request, response) {
+app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
