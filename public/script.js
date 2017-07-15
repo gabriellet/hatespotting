@@ -122,8 +122,14 @@ function performSearch(flag=true) {
 		store.set('user',search);
 		initStore(); 
 	}
+
+	$('button').click(function () {
+        $.get('/search?q='+search, function (data) {
+        	console.log(data);
+      	});
+    });
 	
-	if ($('input:checkbox[name=type]:checked').length > 0) {
+	/*if ($('input:checkbox[name=type]:checked').length > 0) {
 		$('input:checkbox[name=type]:checked').each(function() {
 			var request = {
 				bounds: map.getBounds(),
@@ -152,7 +158,7 @@ function performSearch(flag=true) {
 			keyword: search
 		};
 		service.radarSearch(request, callback);
-	}
+	}*/
 }
 
 function initStore() {
