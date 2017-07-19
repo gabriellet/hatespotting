@@ -23,10 +23,10 @@ module.exports = function(req, res, next) {
       }
     });
 
-    console.log('Returning function');
+/*    console.log('Returning function');
     return function(req, res, next){
         if (next) next();
         //next();
-    };
+    };*/
 
 };
