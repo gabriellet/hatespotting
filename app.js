@@ -34,6 +34,7 @@ app.get('/search', gmSearch, function(req, res) {
     gmSearchResponse = res.locals.gmResponse;
     //console.log(gmSearchResponse);
     res.json(gmSearchResponse || {});
+    //res.end(JSON.stringify(gmSearchResponse));
     //res.status(200).render('pages/index'); 
 });
 

@@ -114,20 +114,19 @@ function handle(e) {
 }
 
 function performSearch(flag=true) {
-	var search = $( "#search" ).val();
 	deleteMarkers();
 	$("#results tr").empty();
+	var search = $( "#search" ).val();
+	console.log('Client script search: '+search);
+    $.get('/search?q='+search, function (data) {
+        //alert('Client script: '+data); //this displays a modal
+        callback(data, google.maps.places.PlacesServiceStatus.OK);
+    });
 	
-	if(flag){
+/*	if(flag){
 		store.set('user',search);
 		initStore(); 
-	}
-
-	$('button').click(function () {
-        $.get('/search?q='+search, function (data) {
-        	console.log(data);
-      	});
-    });
+	}*/
 	
 	/*if ($('input:checkbox[name=type]:checked').length > 0) {
 		$('input:checkbox[name=type]:checked').each(function() {
